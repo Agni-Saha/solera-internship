@@ -1,0 +1,96 @@
+.Hero {
+    position: relative;
+    margin-top: 1rem;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("Home-Hero-Desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    object-fit: contain;
+}
+
+.hero-container {
+    position: relative;
+    line-height: 1.05;
+}
+
+.hero-container h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.hero-container .first-line {
+    padding-left: 10rem;
+}
+
+.hero-container .second-line {
+    padding-right: 10rem;
+}
+
+.hero-container .third-line {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 4rem;
+    padding-left: 10rem;
+}
+
+.hero-container .hero-button {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+    font-size: 0.875rem;
+    background-color: #142b6f;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-container .hero-button:hover {
+    background-color: white;
+    color: #142b6f;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container h1 {
+        font-size: 2.5rem;
+    }
+    .hero-container .first-line {
+        padding-left: 1rem;
+    }
+    .hero-container .second-line {
+        padding-right: 1rem;
+    }
+    .hero-container .third-line {
+        font-size: 2rem;
+        padding-left: 1rem;
+    }
+    .Hero::before {
+        background-image: url("Home-Hero-Mobile.webp");
+    }
+    .Hero {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Hero {
+        height: 100vw;
+    }
+}
